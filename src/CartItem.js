@@ -1,6 +1,6 @@
 import React from "react";
 import "./CartItem.css";
-class CartItem extends React.Component{
+const CartItem =(props)=>{
     // increaseQty=()=>{
     //     // to set the state we have two function,if we do not required prev state than we can we use first functioni
     //     // this.setState({
@@ -24,12 +24,12 @@ class CartItem extends React.Component{
     //         }
     //     })
     // }
-    render(){
-        const {price,title,qty}=this.props.product;
+    
+        const {price,title,qty,img}=props.product;
         return(
             <div className="cart-item">
                 <div className="left-block">
-                <img src="" alt="" className="productImage" />
+                <img src={img} alt="" className="productImage" />
                 </div>
                 <div className="right-block">
                     <div style={{fontSize:25}}>{title}</div>
@@ -41,7 +41,7 @@ class CartItem extends React.Component{
                          alt="increase" 
                          className="action-icons" 
                          onClick={()=>{
-                            this.props.increaseQuantity(this.props.product)
+                            props.increaseQuantity(props.product)
                          }}
                          />
                         <img 
@@ -49,21 +49,21 @@ class CartItem extends React.Component{
                         alt="decrease" 
                         className="action-icons" 
                         onClick={()=>{
-                            this.props.decreaseQuantity(this.props.product)
+                            props.decreaseQuantity(props.product)
                         }}
                         />
                         <img src="https://t3.ftcdn.net/jpg/00/65/77/26/240_F_65772602_cPboY4Oamnswse6bN2r9ky4hXDQEVNix.jpg" 
                         alt="delete" 
                         className="action-icons" 
                         onClick={()=>{
-                            this.props.deleteQuantity(this.props.product)
+                            props.deleteQuantity(props.product)
                         }}
                         />
                     </div>
                 </div>
             </div>  
         )
-    }
+    
 }
 
 export default CartItem

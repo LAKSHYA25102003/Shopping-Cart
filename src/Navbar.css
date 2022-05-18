@@ -1,0 +1,24 @@
+.nav{
+    background-color: rgba(0, 0, 255, 0.616);
+}
+.nav div{
+    height: 70px;
+    position: relative;
+}
+.nav img{
+    height: 50%;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+.nav span{
+    display: inline-block;
+    background-color: yellow;
+    border-radius: 10px;
+    min-width: 20px;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    right: 15px;
+    top: 12px;
+}
